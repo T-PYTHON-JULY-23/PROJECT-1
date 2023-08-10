@@ -23,6 +23,7 @@
 - view students in all rooms
 - view room details 
 - remove students from a room  
+- search for a student 
 - delete a room.
 
 
