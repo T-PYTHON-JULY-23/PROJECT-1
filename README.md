@@ -11,33 +11,41 @@
 - Use some form of Error Handling .
 - Organize Your Code into modules & (or packages)
 
-## Example Project :  An online Grocery Store :
+#### Welcome to my project1 (GAMES):
 
-#### Overview : An online store that sells fruits to customers. This online store has 2 main users. The customer and the manager of the store . Each one of them should be able to do the following tasks for the store to function properly . 
+ a program that gathers games in one file and let the users choose which one they wants to play, the file contain three games which are:
+ 1-Four in a raw 
+ 2-Guess the word
+ 3-Who win first
 
-#### As a customer I should be able to do the following :
-- Browse  Products . 
-- View the product info (summary, specs, price, quantity , etc.)
-- Search for Products.
-- Get recommendations for my next purchase based on my purchase history.
-- Add Products to the shopping cart .
-- Remove a product from the shopping cart.
-- List the products in my shopping cart. 
-- Continue to checkout . 
-- Fill in my address for delivery.
-- Get receipt of my purchases.
-- Check delivery status . 
+ 
+- 
 
 
 
 #### Usage :
- Explain to the user how to use your project . 
- for example:
- - type in search product_name to search for a product.
- - type in list_products to show all the products in the grocery.
- - type in show product_name to get information about this product.
- - type in buy product_name to buy the product . 
- - and so on...
+
+1. Four in a raw 
 
 
-### For your project. Edit this README.md file to include your own project name,  overview, user stories, and usage. 
+2. Guess the word
+
+Game Rules:
+
+    1. the game is played by a single player 
+    2. the user can enter a random letter and if it's true it will be saved in a list, if it's false the chances will be decreased 
+    3. the game stops when the user writes the right word or when theres no attempts left. 
+
+
+3. Who win first:
+    
+Game Rules:
+
+    1. The game is played between the player and the computer.
+    2. The user can enter one or two numbers between 1 to 20.
+    3. Once a number is entered, it cannot be repeated.
+    4. The game stops when either the player or the computer enters the number 20.
+    5. The player who enters the number 20 wins the game.
+
+
+
