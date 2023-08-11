@@ -1,4 +1,4 @@
-from random import randint
+import random
 
 class WhoWinFirst:
     def __init__(self):
@@ -8,54 +8,68 @@ class WhoWinFirst:
 
     def play(self):
         while True:
-            number = input("Enter a number or two between 1 to 20 in order seprated by space: ")
+            number = input("Enter a number or two between 1 to 20 in order separated by space: ")
             numbersList = number.split(" ")
-            print(numbersList)
-
 
             # Check if the user entered one or two numbers
             if len(numbersList) == 1:
-                num1 = numbersList[0]
+                num1 = int(numbersList[0])
                 num2 = None
             elif len(numbersList) == 2:
-                num1, num2 = numbersList[0], numbersList[1]
+                num1, num2 = int(numbersList[0]), int(numbersList[1])
             else:
                 print("You must enter one or two numbers only.")
+                continue
 
-            try:
-                number = int(number)
-                
-                if number < 1 or number > 20:
-                    raise ValueError
-            except ValueError:
-                print("Invalid input, please enter a number between 1 to 20 in order.")
-                #continue
-            if number in self.playerTurns + self.computerTurns:
+            if not self.is_valid_number(num1, num2):
+                continue
+
+            if num1 in self.playerTurns + self.computerTurns:
                 print("You already entered that number, please choose a different one.")
                 continue
-            elif self.currentPlayer == "player":
-                self.playerTurns.append(number)
+
+            # Update currentPlayer before making a move
+            if self.currentPlayer == "player":
+                self.currentPlayer = "computer"
             else:
-                self.computerTurns=randint(1, 2)
-                self.computerPlaying(numbersList)
+                self.currentPlayer = "player"
+
+            self.playerTurns.append(num1)
+            if num2 is not None:
+                self.playerTurns.append(num2)
 
             print("Player turns:", self.playerTurns)
             print("Computer turns:", self.computerTurns)
+
             if self.check_win():
                 print(self.currentPlayer.capitalize(), "wins!")
                 break
-            self.switch_player()
+
+            if self.currentPlayer == "computer":
+                self.computerPlaying()  # Call computerPlaying() after player's turn
+                print("Computer turns:", self.computerTurns)
+
+            if self.check_win():
+                print(self.currentPlayer.capitalize(), "wins!")
+                break
 
 
-    def computerPlaying(numbersList):
-        if len(numbersList) == 1:
-            computerNumbersList1 = numbersList[0]+1
-            computerNumbersList2 = None
 
-        elif len(numbersList) == 2:
-            computerNumbersList1 = numbersList[0]+1
-            computerNumbersList2 = numbersList[1]+2
+    def is_valid_number(self, num1, num2):
+        if num1 < 1 or num1 > 20 or (num2 is not None and (num2 < 1 or num2 > 20)):
+            print("Invalid input, please enter a number between 1 to 20 in order.")
+            return False
+        return True
 
+    def computerPlaying(self):
+        if self.currentPlayer == "computer":
+            last_player_num = self.playerTurns[-1] if self.playerTurns else 0
+            next_computer_num = last_player_num + 1 if last_player_num < 20 else last_player_num - 1
+            
+            if random.choice([True, False]):  # Randomly decide whether to enter one or two numbers
+                self.computerTurns.append(next_computer_num)
+            else:
+                self.computerTurns.extend([next_computer_num, next_computer_num + 1])
 
     def check_win(self):
         if 20 in self.playerTurns:
@@ -71,11 +85,6 @@ class WhoWinFirst:
         else:
             self.currentPlayer = "player"
 
+
 game = WhoWinFirst()
 game.play()
-
-"""if __name__ == "__main__":
-    game = WhoWinFirst()
-    game.play()"""
-
-        

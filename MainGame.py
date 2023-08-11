@@ -1,19 +1,16 @@
 from games.GuessTheWord import GuessWord
-from games.FourInRaw import FourInRaw
+from games.FourInRaw import FourInARow
 from games.WhoWinFirst import WhoWinFirst
 
-games = [GuessWord, FourInRaw, WhoWinFirst]
-wordbank = ["python", "java", "ruby", "php", "javascript" , "html", "C"]
-
-
+wordbank = ["python", "java", "ruby", "php", "javascript", "html", "C"]
 
 def main():
-    choice = games
-
+    games = [GuessWord(wordbank), FourInARow(), WhoWinFirst()]
+    
     while True:
-        print("Welcome to the Games World!!!\n\n")
+        print("Welcome to the Games World!!!\n")
         print("Select a game to play:\n")
-        print("1- GuessTheWord\n")
+        print("1- GuessTheWord")
         print("2- FourInRaw")
         print("3- WhoWinFirst")
         print("4- Exit\n")
@@ -21,13 +18,13 @@ def main():
         choice = input("Please enter your choice: ")
 
         if choice == "1":
-            GuessWord.play(wordbank)
+            games[0].play()
 
         elif choice == "2":
-            FourInRaw.play()
+            games[1].play()
 
         elif choice == "3":
-            WhoWinFirst.play()
+            games[2].play()
 
         elif choice == "4":
             break
@@ -37,5 +34,5 @@ def main():
 
     print("Goodbye!")
 
-
-main()
+if __name__ == "__main__":
+    main()
