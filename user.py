@@ -1,71 +1,72 @@
-from training_course import TrainingCours as TC
-from training_course import Training
-import training_course
+from training_course import Training 
+import training_course as TC
+from art import *
+from colorama import Fore, Back, Style
 
-
-cours_python = TC("Building Websites Using Python" , "the basics of the Python language\n and the basics of building websites using one of the most popular frameworks that help build integrated web pages ","23-09-2023" , "10:00AM-3:00PM" , 'Riyadh')
-cours_java = TC("\nBuilding Websites Using Java" , "aims to develop and build web applications using the Spring boot framework.\n Where you can start your educational journey by learning the basics of the Java language","23-08-2023" , "10:00AM-3:00PM" , 'Riyadh')
-cours_security = TC("\nInformation Security Program","aims to introduce basic units related to information security,\n familiarity with cyber challenges and threats, and advanced methods for protecting information privacy.","20-08-2023", "6:00PM-9:00PM","Riyadh")
-cours_microsoft_power = TC("\nMicrosoft Power Platform Basics","A specialized training program for those wishing to obtain an accredited \nMicrosoft certificate in the field of Power Platform Fundamentals (PL-900).", "13-08-2023", "6:00PM-9:00PM", "Riyadh")
-l= cours_python.name_course , cours_java.name_course ,cours_security.name_course ,cours_microsoft_power.name_course
-cours_list=[cours_python, cours_java,cours_security, cours_microsoft_power]
-list_user=[]
-infromation_list=[]
- 
-
-def display_to_user():
-    #This function shows the user the courses
-    display = input("Do you want to view courses? answer: yes or no\n")
-    if display == 'yes':
-           for c in cours_list:
-            print(c.courses())
-            print('*'*15)
-
-        
-
-def user_add_course():
+def student_registration_course(cours_list, list_user, infromation_list, training_course):
     #This function allows the user to register in courses: 
+    infromation_list=[]
+    list_user=[]
     while True:
-        user_registration = input("Do you want to register in courses? answer: yes or no\n")
-        if user_registration == 'yes':
-            chooes_user_cours = input("Choose the course you want:\n")
-            for course in cours_list:
-                    if chooes_user_cours==course.name_course:
-                        if chooes_user_cours in list_user:
-                            print("You are already registered")
-                            continue
-                    
-                        elif infromation_list == []:
-                                    name = input("Enter yuor name:\n")
-                                    email =input("Enter your email:\n")
-                                    infromation_list.append(name)
-                                    infromation_list.append(email)
+        user_registration= input(Fore.WHITE+"\nTo view courses press 1, to register press 2, to view your recordings press 3, to exit the program press 4: ")
+        if user_registration.strip() == '1':
+             for c in cours_list:
+                print(Fore.BLUE+"\n",c.courses())
+                print('*'*15)
 
-                                    phone_number =input("Enter phone number:")
-                                    while len(phone_number) > 10  or  len(phone_number) < 10 :
-                                        phone_number =input("Please enter your phone number again:")
-                                    infromation_list.append(phone_number)
+        elif user_registration.strip() == '2':
+            chooes_user_cours = input(Fore.WHITE+"\nChoose the course you want: ")
+            #Checks the course entered by the user if it exists or not
+            if chooes_user_cours.strip().title() in cours_list:
+                #Checks if it has been previously registered or not
+                if chooes_user_cours.strip().title() in list_user:
+                    name=infromation_list[0]
+                    email=infromation_list[1]
+                    phone_number=infromation_list[2]
+                    print(Fore.RED+"You are registered")
+                else:
+                  #User information
+                    if infromation_list == []:
+                        name = input("\nEnter yuor name: ")
+                        infromation_list.append(name)
+            
+                        email =input("Enter your email: ")
+                        try:
+                            if email.index("@gmail"):
+                                infromation_list.append(email)
+                        except:
+                            email=input("Enter your email again with @: ")
+                            infromation_list.append(email)
+                        
 
-                        else:
-                            print(infromation_list)
-                            name=infromation_list[0]
-                            email=infromation_list[1]
-                            phone_number=infromation_list[2]
-                        t1= Training(name , int(phone_number), email)
-                        training_course.add(t1)
-                        print(f"yuor name is: {t1.name} your email is: {t1.email} your number phone: {t1.phone_number}" )
-                        list_user.append(chooes_user_cours)
-                        print("You have been registered successfully")
+                        phone_number =input("Enter phone number: ")
+                        while len(phone_number) > 10  or  len(phone_number) < 10 :
+                            phone_number =input("\nPlease enter your phone number again:")
+                        infromation_list.append(phone_number)
 
-                    
+                    else:
+                        name=infromation_list[0]
+                        email=infromation_list[1]
+                        phone_number=infromation_list[2]
+                    t1= Training(name , int(phone_number), email)
+                    training_course.add(t1)
+                    print(f"yuor name is: {t1.name} your email is: {t1.email} your number phone: {t1.phone_number}\n" )
+                    list_user.append(chooes_user_cours)
+                    print(Fore.MAGENTA+"You have been registered successfully")  
+            else: 
+                print(Fore.RED+"The course not found!!")
 
 
-        elif user_registration == 'no':
-                ask_user= input("do you want to list your courses items? answer: yes or no\n")
-                if ask_user == 'yes':
-                        print(list_user[:])
 
-                #to exit the program
-                exit1 = input("Do you want exit program: answer:yes or no\n")
-                if exit1== 'yes':
-                    print("\nthank you for using the  program, come back again soon")
+        elif user_registration == '3':
+                for i in list_user[:]:
+                    print(Fore.YELLOW+'\n',i)
+                
+
+            #to exit the program
+           
+        elif user_registration == '4':
+                print(Fore.LIGHTGREEN_EX+"\nthank you for using the  program, come back again soon\n")
+                break
+        else:
+             print(Fore.RED+"Please choose from 1-4")
