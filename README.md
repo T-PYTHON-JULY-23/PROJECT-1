@@ -1,43 +1,26 @@
-# PROJECT-1
+# PROJECT-1 : Expenses Tracker 
 
-## Based on what you’ve learned until now , create a project of your choosing (impress us with your imagination) . This project must at least satisfy the following minimum requirements :
+#### Overview :
 
-- Must be interactive on CLI.
-- Use lists or dictionaries or tuples. 
-- Use loops.
-- Use functions that return an output . 
-- Use a Lambda function.
-- Use at least 1 Class.
-- Use some form of Error Handling .
-- Organize Your Code into modules & (or packages)
+## This Program allows you to enter expenses along with categories and amounts, which will be automatically saved with the time and date. It also provides the ability to view detailed data and offers a graphical representation of your expenses. 
 
-## Example Project :  An online Grocery Store :
 
-#### Overview : An online store that sells fruits to customers. This online store has 2 main users. The customer and the manager of the store . Each one of them should be able to do the following tasks for the store to function properly . 
+## User Stories
 
-#### As a customer I should be able to do the following :
-- Browse  Products . 
-- View the product info (summary, specs, price, quantity , etc.)
-- Search for Products.
-- Get recommendations for my next purchase based on my purchase history.
-- Add Products to the shopping cart .
-- Remove a product from the shopping cart.
-- List the products in my shopping cart. 
-- Continue to checkout . 
-- Fill in my address for delivery.
-- Get receipt of my purchases.
-- Check delivery status . 
-
+- As a user, I want to record my daily expenses along with categories and amounts.
+- As a user, I want to see statistics like the highest and lowest expenses, total expenses, and average spending.
+- As a user, I want to visualize my expenses using interactive charts.
+- As a user, I want to save and load my expense data for future reference.
 
 
 #### Usage :
- Explain to the user how to use your project . 
- for example:
- - type in search product_name to search for a product.
- - type in list_products to show all the products in the grocery.
- - type in show product_name to get information about this product.
- - type in buy product_name to buy the product . 
- - and so on...
+
+1- Press "Add Expense" to add a new expense by entering the expense amount and category.
+2- Press "View Expenses" to display previous expenses with dates and times.
+3- Press "Expense Statistics" to view statistics of the recorded expenses. 
+4- Press "Graphical Chart" to track expenses and view a graphical representation.
+5- Press "Exit" to leave the program.
+
 
 
 ### For your project. Edit this README.md file to include your own project name,  overview, user stories, and usage. 

@@ -1,0 +1,52 @@
+[
+    {
+        "Catagory": "food",
+        "Amount": 50.0,
+        "date": "2023-08-11 23:23:12.024251"
+    },
+    {
+        "Catagory": "coffee",
+        "Amount": 25.0,
+        "date": "2023-08-11 23:25:33.051415"
+    },
+    {
+        "Catagory": "shopping",
+        "Amount": 200.0,
+        "date": "2023-08-11 23:26:22.495674"
+    },
+    {
+        "Catagory": "salon",
+        "Amount": 120.0,
+        "date": "2023-08-12 01:15:58.332955"
+    },
+    {
+        "Catagory": "resturent",
+        "Amount": 306.0,
+        "date": "2023-08-12 01:57:58.885025"
+    },
+    {
+        "Catagory": "shopping",
+        "Amount": 162.0,
+        "date": "2023-08-12 02:02:23.960207"
+    },
+    {
+        "Catagory": "market",
+        "Amount": 57.0,
+        "date": "2023-08-12 17:10:26.157921"
+    },
+    {
+        "Catagory": "car",
+        "Amount": 400.0,
+        "date": "2023-08-13 00:55:28.293278"
+    },
+    {
+        "Catagory": "online shopping",
+        "Amount": 300.0,
+        "date": "2023-08-13 01:01:50.405603"
+    },
+    {
+        "Catagory": "coffee",
+        "Amount": 8.0,
+        "date": "2023-08-13 01:24:27.881831"
+    }
+]
