@@ -54,15 +54,15 @@ class AccountManagement:
        
        Retirementage = 60 - self.age
        
-       print("Retirment averge age is 60\n")
+       print("Retirment averge age is 60 years.\n")
        print(f"You have {Retirementage}years left until Retirment\n")
 
 
     def SalaryCal(self):
 
-        raise_in_salary = self.CalculatYearSpending() - self.salary
-        raise_in_salaryPre = (raise_in_salary / self.salary)*100
-
-        print(f"You need {round(raise_in_salaryPre,2)}% raise in your salary to be able to afford your spending last year\n")
+        if round(raise_in_salaryPre,2)<1:
+            print("You don't need a raise")
+        else:
+            print(f"You need {round(raise_in_salaryPre,2)}% raise in your salary to be able to afford your spending last year\n")
 
 
