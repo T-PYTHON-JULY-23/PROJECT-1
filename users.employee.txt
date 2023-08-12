@@ -1,4 +1,0 @@
-<users.usersClasses.Employee object at 0x108940c10>
-<users.usersClasses.Employee object at 0x108941150>
-<users.usersClasses.Employee object at 0x1089579d0>
-<users.usersClasses.Employee object at 0x108957a10>
