@@ -48,7 +48,7 @@ def ClientInput():
     try:  
         print('_'*30)
         while exit:
-            UserChoese = input("\nPlease Choose from  number from the list below:\n1- To Calculat all Last Year Spending.\n2- To Estimate Next Year Spending.\n3- To Get Information On Your Debit.\n4- To Calculat How Many Years Left For Your Retirement.\n5- To Calculat The Needed Raise In Your Salary.\n6- To Exit The Programme.\n")
+            UserChoese = input("\nPlease Choose from  number from the list below:\n1- To Calculat all Last Year Spending.\n2- To Estimate Next Year Spending.\n3- To Get Information On Your Debit.\n4- To Calculat How Many Years Left For Your Retirement.\n5- To Calculat The Needed Raise In Your Salary.\n6- To Exit The Programme.\n\n")
             if UserChoese == '1':
                 print(f"All your last year spending: {account.CalculatYearSpending()}\n")
             elif UserChoese == '2':
