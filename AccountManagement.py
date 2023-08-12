@@ -55,7 +55,7 @@ class AccountManagement:
        Retirementage = 60 - self.age
        
        print("Retirment averge age is 60\n")
-       print(f"You have {Retirementage} left until Retirment\n")
+       print(f"You have {Retirementage}years left until Retirment\n")
 
 
     def SalaryCal(self):
