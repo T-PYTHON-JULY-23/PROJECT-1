@@ -15,8 +15,6 @@ while True:
         age= input ("Enter patient age: ")
         file_number= input("Enter patient file number (number must be a 7-digit number): ")
         
-        
-        
         medical_history= input ("Enter patient medical history or Enter 'Within normal limits' ")
         chief_complient=input  ( "Enter patient chief complaint: ")
         #ecc= input("has early childhood caries? enter ECC or No ")
@@ -27,11 +25,11 @@ while True:
         d.add_patient(New_patient)
                 
     elif choice == "2":
-        d.display_all_patients() 
+        d.display_all_patients()
         
     elif choice == "3":
         try:
-            file_number = int(input("Enter the patient's file number: "))
+            file_number = input("Enter the patient's file number: ")
             if len(str(file_number)) != 7:
                 raise ValueError("File number must be a 7-digit number.")
             d.find_patient(file_number)
@@ -40,7 +38,7 @@ while True:
         
     elif choice == "4":
         try:
-            file_number = int(input("Enter the patient's file number: "))
+            file_number = input("Enter the patient's file number: ")
             if len(str(file_number)) != 7:
                 raise ValueError("File number must be a 7-digit number.")
             d.remove_patient(file_number)

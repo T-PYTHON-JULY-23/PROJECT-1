@@ -35,7 +35,7 @@ class Dental:
             )
             
         with open("patients.txt", "w") as file:
-            file.write(json.dumps(patients_list)+ "\n")
+            file.write(json.dumps(patients_list , indent=4)+ "\n")  #indent=4 
     
     def add_patient(self, patient):
         self.patients_list.append(patient) 

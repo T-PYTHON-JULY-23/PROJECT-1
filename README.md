@@ -1,6 +1,6 @@
 # PROJECT-1
 
-## Based on what you’ve learned until now , create a project of your choosing (impress us with your imagination) . This project must at least satisfy the following minimum requirements :
+## This project must at least satisfy the following minimum requirements :
 
 - Must be interactive on CLI.
 - Use lists or dictionaries or tuples. 
@@ -11,13 +11,12 @@
 - Use some form of Error Handling .
 - Organize Your Code into modules & (or packages)
 
-## Example Project :  An online Grocery Store :
+## Project : Dental public health :
 
-#### Overview : An online store that sells fruits to customers. This online store has 2 main users. The customer and the manager of the store . Each one of them should be able to do the following tasks for the store to function properly . 
 
-#### As a customer I should be able to do the following :
-- Browse  Products . 
-- View the product info (summary, specs, price, quantity , etc.)
+#### As a Dental Doctor I should be able to do the following :
+- Browse choices . . 
+- chose 1 to Collect Patient Information (name , age , file number , medical_history , etc.)
 - Search for Products.
 - Get recommendations for my next purchase based on my purchase history.
 - Add Products to the shopping cart .
