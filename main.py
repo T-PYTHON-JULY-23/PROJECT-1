@@ -1,3 +1,6 @@
+# Here are implemented functions, classes, and calls
+# And some libraries that have been used.
+
 import matplotlib.pyplot as plt
 from funcation import *
 from resources import *
@@ -5,45 +8,32 @@ from colorama import init, Fore
 import rich, os
 from rich.text import Text
 from rich.panel import Panel
-
 os.system("cls" if os.name == "nt" else "clear")
 
 # _____________________________________________________________________
-rich.print(Panel(Text("📉 WELCOME TO THE OIL & GOLD STOCK MARKET📉", justify="center")))
-print(
-    Fore.BLUE
-    + """ \n\t\t\t\t\tThis program aims to monitor the current prices and changes in the oil and gold markets in real time and continuously
-              \t\t\t \t\t\t  You can follow price fluctuations and market trends and predict future changes.  
-            \t\t\t\t\t  This enhances your chances of making informed investment decisions and making outstanding profits."""
-)
+rich.print(Panel(Text(" 📉 WELCOME TO THE OIL & GOLD STOCK MARKET 📉 ", justify="center")))
+print(Fore.BLUE+ """\n \t \t \t \tThis program aims to monitor the current prices and changes in the oil and gold markets in real time and continuously
+                                                You can follow price fluctuations and market trends and predict future changes.  
+                                     This enhances your chances of making informed investment decisions and making outstanding profits.""")
 print("\n")
 print(Fore.WHITE + "⤵︎")
-#_____________________________________________________
-def check_choice(choice):
-    try :
-        if len(choice) == 0:
-            view_options()
-            return
-        choice = int(choice)
-    except ValueError:
-        view_options()
-        print(
-            Fore.RED
-            + "🛑 This option is not available - choose from the options available to you "
-        )
-        return
-#_______________________________________________________________________
-    if choice == 1:
+# ______________________________________________________________________
+view_options()
+while True:
+    choice = input(Fore.RED + "☞ Enter your choice [ All ] → ")
+
+    if choice == "1":
         display_oil_exports()
-    elif choice == 2:
+    elif choice == "2":
         display_oil_importers()
-    elif choice == 3:
+    elif choice == "3":
         display_gold_importers()
-    elif choice == 4:
+    elif choice == "4":
         display_Gold_Sources()
-    elif choice == 5:
+    # ______________________________________________________________________
+    elif choice == "5":
         while True:
-            print(Fore.WHITE + "\n --- GOLD ACCOUNT : ----\n")
+            print(Fore.WHITE + "\n--- GOLD ACCOUNT : ----\n ")
             print(Fore.BLACK +"◈ You can calculate the gram of GOLD you want, you must specify the karat \n")
             try:
                 weight = float(input(Fore.BLUE + "● Enter the weight in grams: "))
@@ -64,16 +54,15 @@ def check_choice(choice):
                 print(
                     Fore.RED + "🛑 Invalid input. Please enter a valid weight and carat."
                 )
-#___________________________________________________________________________                
-
-    elif choice == 6:
+    # _______________________________________________________________________
+    elif choice == "6":
         stocks = stock_prices
         print(Fore.WHITE + "\n --- Stocks : ---- \n")
         print(Fore.BLACK + "◈ Here, you can pick the firm and the type of stock  you want, and determine the total number of stocks you desire .")
         print(Fore.BLACK + "◈ Example : Aramco → Crude Oil - Company: Aramco |Type of oil Stock : Crude oil  \n")
         for stock, price in stocks.items():
             print(Fore.BLUE + f"{stock}: $ {price}")
-        stock_type = input(Fore.WHITE + "\n● Enter the stock type: ")
+        stock_type = input(Fore.WHITE + " \n● Enter the stock type: ")
         stock_company = input(Fore.WHITE + "● Enter the stock company: ")
 
         stock_company_with_type = f"{stock_company} {stock_type}"
@@ -86,25 +75,21 @@ def check_choice(choice):
             Fore.GREEN
             + f"⚑ Total price for {stock_count} stocks of {stock_company} → $ {stock_price}"
         )
-    #________________________________________________________________________________    
-    elif choice == 7:
+    # ______________________________________________________________________
+    elif choice == "7":
         show_oil_export_chart()
-    elif choice == 8:
+    elif choice == "8":
         Gold_Source()
-    elif choice == 9:
-        oil_stock_prices(stock_prices)
+    # ______________________________________________________________________
+    elif choice == "9":
+        oil_company_data = oil_stock_prices(stock_prices)
         input("☞ Press - Enter - to choose another option . ")
+    # ______________________________________________________________________
 
-    #_______________________________________________________________________________    
-        
-
-    elif choice == 10:
+    elif choice == "10":
         # ------------------[ supervisor login ]----------------------
-        continueOption = input(Fore.CYAN + "Are You sure You want to Continue ? (Y/N): ")
-        if continueOption.lower() == "n" or continueOption.lower() == "no":
-            return
-        print(Fore.WHITE + "-- Supervisor Login --")
 
+        print(Fore.WHITE + "-- Supervisor Login --")
         username = input(Fore.BLUE + "● username> ")
         password = input(Fore.BLUE + "● password> ")
         if (
@@ -147,33 +132,32 @@ def check_choice(choice):
                     print(Fore.WHITE + "--- Modify Gold Source :---")
                     print(Fore.BLUE + "● Enter the gold type to modify:")
                     gold_type = input(Fore.WHITE + " → ")
-                    for gold_item in gold_sources:
-                        if gold_item.Gold_type == gold_type:
-                            gold_item.Gold_type = input("● Enter the gold type: ")
-                            gold_item.Gold_price = float(
-                                input("● Enter the gold price: ")
-                            )
-                            gold_item.currency_used = input(
-                                "● Enter the currency used: "
-                            )
-                            gold_item.Gold_city = input("● Enter the gold city: ")
-                            print(Fore.GREEN + "⚑ Gold Source modified successfully.")
-                            break
-                        elif gold_sources.index(gold_item) == len(gold_sources) -1 :
-                            print(Fore.RED + "🛑 Gold Source not found.")
+                 
+                    if gold_type in [gold_item.Gold_type for gold_item in gold_sources]:
+                        gold_item.Gold_type = input("● Enter the gold type: ")
+                        gold_item.Gold_price = float(
+                            input("● Enter the gold price: ")
+                        )
+                        gold_item.currency_used = input(
+                            "● Enter the currency used: "
+                        )
+                        gold_item.Gold_city = input("● Enter the gold city: ")
+                        print(Fore.GREEN + "⚑ Gold Source modified successfully.")
+                        
+                    else:
+                        print(Fore.RED + "🛑 Gold Source not found.")
 
                 elif gold_option == 3:  # Delete Gold Source
                     print(Fore.WHITE + " --- Delete Gold Source :---")
                     print(Fore.BLUE + "● Enter the gold type to delete:")
                     gold_type = input(Fore.WHITE + "→  ")
-                    for gold_item in gold_sources:
-                        if gold_item.Gold_type == gold_type:
-                            gold_sources.remove(gold_item)
-                            print(Fore.GREEN + "⚑ Gold Source deleted successfully.")
-                            break
-                        elif gold_sources.index(gold_item) == len(gold_sources) -1 :
 
-                            print(Fore.RED + "🛑 Gold Source not found.")
+                    if gold_type in [gold_item.Gold_type for gold_item in gold_sources]:
+                        gold_sources.remove(gold_item)
+                        print(Fore.GREEN + "⚑ Gold Source deleted successfully.")
+                        
+                    else:
+                        print(Fore.RED + "🛑 Gold Source not found.")
 
                 # ------------------------------------[ Gold Import ]--------------------------------
 
@@ -201,39 +185,37 @@ def check_choice(choice):
                     print(Fore.WHITE + "-- Modify Gold Import :--")
                     print(Fore.BLUE + "● Enter the importing country to modify : ")
                     importing_country = input(Fore.WHITE + "→  ")
-                    for import_country in gold_import_countries:
-                        if import_country.Importing_Country == importing_country:
-                            import_country.Importing_Country = input(
-                                "● Enter the importing country: "
-                            )
-                            import_country.Imported_need = input(
-                                "● Enter the imported need: "
-                            )
-                            import_country.Possible_cost = float(
-                                input("● Enter the possible cost: ")
-                            )
-                            import_country.Importing_NIC = input(
-                                "● Enter the importing NIC: "
-                            )
-                            import_country.Type_imported_material = input(
-                                "● Enter the type of imported material: "
-                            )
-                            print(Fore.GREEN + "⚑ Gold Import modified successfully.")
-                            break
-                        elif gold_import_countries.index(import_country) == len(gold_import_countries) -1 :
-                            print(Fore.RED + "🛑 Gold Import not found.")
+                    if importing_country in [import_country.Importing_Country for import_country in gold_import_countries]:
+                        import_country.Importing_Country = input(
+                            "● Enter the importing country: "
+                        )
+                        import_country.Imported_need = input(
+                            "● Enter the imported need: "
+                        )
+                        import_country.Possible_cost = float(
+                            input("● Enter the possible cost: ")
+                        )
+                        import_country.Importing_NIC = input(
+                            "● Enter the importing NIC: "
+                        )
+                        import_country.Type_imported_material = input(
+                            "● Enter the type of imported material: "
+                        )
+                        print(Fore.GREEN + "⚑ Gold Import modified successfully.")
+                        
+                    else:
+                        print(Fore.RED + "🛑 Gold Import not found.")
 
                 elif gold_option == 6:  # Delete Gold Import
                     print(Fore.WHITE + "-- Delete Gold Import :--")
                     print(Fore.BLUE + "● Enter the importing country to delete:")
                     importing_country = input(Fore.WHITE + "→ ")
-                    for import_country in gold_import_countries:
-                        if import_country.Importing_Country == importing_country:
-                            gold_import_countries.remove(import_country)
-                            print(Fore.GREEN + "⚑ Gold Import deleted successfully.")
-                            break
-                        elif gold_import_countries.index(import_country) == len(gold_import_countries) -1 :
-                            print(Fore.RED + "🛑 Gold Import not found.")
+                    if importing_country in [import_country.Importing_Country for import_country in gold_import_countries]:
+                        gold_import_countries.remove(import_country)
+                        print(Fore.GREEN + "⚑ Gold Import deleted successfully.")
+                        
+                    else:
+                        print(Fore.RED + "🛑 Gold Import not found.")
                 else:
                     print("◢ Invalid option.")
 
@@ -273,42 +255,50 @@ def check_choice(choice):
                     print(Fore.WHITE + "-- Modify Oil Export :--")
                     print(Fore.BLUE + "● Enter the export country to modify :")
                     Export_Country = input(Fore.WHITE + "→ ")
-                    for export_country in export_countries:
-                        if export_country.Export_Country == Export_Country:
-                            export_country.petroleum_Type = input(
-                                Fore.BLUE + "● Enter the petroleum type: "
-                            )
-                            export_country.oil_price = float(
-                                input("● Enter the oil price: ")
-                            )
-                            export_country.Export_date = input(
-                                "● Enter the export date: "
-                            )
-                            export_country.Export_Country = input(
-                                "● Enter the export country: "
-                            )
-                            export_country.Currency_used = input(
-                                "● Enter the currency used: "
-                            )
-                            export_country.Export_cost = float(
-                                input("● Enter the export cost: ")
-                            )
-                            print(Fore.GREEN + "⚑ Oil Export modified successfully.")
-                            break
-                        else:
-                              print(Fore.RED + "🛑 Oil Export not found.")
-  
+
+                    this_exporting_countries = [export_country.Export_Country for export_country in export_countries]
+
+                    if Export_Country in this_exporting_countries:
+                        selected_export_country = export_countries[this_exporting_countries.index(Export_Country)]
+                        selected_export_country.petroleum_Type = input(
+                            Fore.BLUE + "● Enter the petroleum type: "
+                        )
+                        selected_export_country.oil_price = float(
+                            input("● Enter the oil price: ")
+                        )
+                        selected_export_country.Export_date = input(
+                            "● Enter the export date: "
+                        )
+                        selected_export_country.Export_Country = input(
+                            "● Enter the export country: "
+                        )
+                        selected_export_country.Currency_used = input(
+                            "● Enter the currency used: "
+                        )
+                        selected_export_country.Export_cost = float(
+                            input("● Enter the export cost: ")
+                        )
+                        print(Fore.GREEN + "⚑ Oil Export modified successfully.")
+                        
+                        
+                    else:
+                        print(Fore.RED + "🛑 Oil Export not found.")
+                    
                 elif oil_option == 3:  # Delete Oil Export
                     print(Fore.WHITE + "-- Delete Oil Export :--")
                     print(Fore.BLUE + "● Enter the export country to delete:")
                     Export_Country = input(Fore.WHITE + "→ ")
-                    for export_country in export_countries:
-                        if export_country.Export_Country == Export_Country:
-                            export_countries.remove(export_country)
-                            print(Fore.GREEN + "⚑ Oil Export deleted successfully.")
-                            break
-                        else: 
-                             print(Fore.RED + "🛑 Oil Export not found.")
+
+                    this_exporting_countries = [export_country.Export_Country for export_country in export_countries]
+
+                    if Export_Country in this_exporting_countries:
+                        selected_export_country = export_countries[this_exporting_countries.index(Export_Country)]
+                        
+                        export_countries.remove(selected_export_country)
+                        print(Fore.GREEN + "⚑ Oil Export deleted successfully.")
+                        
+                    else:
+                        print(Fore.RED + "🛑 Oil Export not found.")
 
                 # ------------------------------------[ Oil Import ]----------------------------------------------------
 
@@ -336,55 +326,58 @@ def check_choice(choice):
                     print(Fore.WHITE + "-- Modify Oil Import :--")
                     print(Fore.BLUE + "● Enter the importing country to modify:")
                     importing_country = input(Fore.WHITE + "→ ")
-                    for import_country in oil_import_countries:
-                        if import_country.Importing_Country == importing_country:
-                            import_country.Importing_Country = input(
-                                Fore.BLUE + "● Enter the importing country: "
-                            )
-                            import_country.Possible_cost = float(
-                                input("● Enter the possible cost: ")
-                            )
-                            import_country.Importing_NIC = input(
-                                "● Enter the importing NIC: "
-                            )
-                            import_country.Type_imported_material = input(
-                                "● Enter the type of imported material: "
-                            )
-                            print(Fore.GREEN + "⚑ Oil Import modified successfully.")
-                            break
-                        elif oil_import_countries.index(import_country) == len(oil_import_countries) -1 :
-                            print(Fore.RED + "🛑 Oil Import not found.")
+
+                    this_importing_countries = [import_country.Importing_Country for import_country in oil_import_countries]
+
+                    if importing_country in this_importing_countries:
+                        selected_import_country = oil_import_countries[this_importing_countries.index(importing_country)]
+                        selected_import_country.Importing_Country = input(
+                            Fore.BLUE + "● Enter the importing country: "
+                        )
+                        selected_import_country.Possible_cost = float(
+                            input("● Enter the possible cost: ")
+                        )
+                        selected_import_country.Importing_NIC = input(
+                            "● Enter the importing NIC: "
+                        )
+                        selected_import_country.Type_imported_material = input(
+                            "● Enter the type of imported material: "
+                        )
+                        print(Fore.GREEN + "⚑ Oil Import modified successfully.")
+                        
+                    else:
+                        print(Fore.RED + "🛑 Oil Import not found.")
 
                 elif oil_option == 6:  # delete oil import
                     print(Fore.WHITE + "-- Delete Oil Import :--")
                     print(Fore.BLUE + "● Enter the importing country to delete:")
                     importing_country = input(Fore.WHITE + "→ ")
-                    for import_country in oil_import_countries:
-                        if import_country.Importing_Country == importing_country:
-                            oil_import_countries.remove(import_country)
-                            print(Fore.GREEN + "⚑ Oil Import deleted successfully.")
-                            break
-                        elif oil_import_countries.index(import_country) == len(oil_import_countries) -1 :
-                            print(Fore.RED + "🛑 Oil Import not found.")
+
+                    this_importing_countries = [import_country.Importing_Country for import_country in oil_import_countries]
+
+                    if importing_country in this_importing_countries:
+
+                        selected_import_country = oil_import_countries[this_importing_countries.index(importing_country)]
+
+                        oil_import_countries.remove(selected_import_country)
+                        print(Fore.GREEN + "⚑ Oil Import deleted successfully.")
+                        
+                    else:
+                        print(Fore.RED + "🛑 Oil Import not found.")
                 else:
                     print("◢ Invalid option.")
         else:
             print(Fore.RED + "🛑 Login failed.")
-    elif choice == 11:
+    # _____________________________________________________________________________________________________________________
+    elif choice == "11":
         print(
             Fore.GREEN
             + "\n ---[Thank you for using our software We look forward to serving you again ☻]---"
         )
-        exit()
+        break
     else:
         view_options()
         print(
             Fore.RED
             + "🛑 This option is not available - choose from the options available to you "
         )
-
-view_options()
-
-while True:
-    choice = input(Fore.RED + "☞ Enter your choice [ All ] → ")
-    check_choice(choice)

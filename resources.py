@@ -64,7 +64,7 @@ export_countries = [
     export_country4,
     export_country5,
     export_country6,
-    export_country6,
+    export_country7,
 ]
 petroleum_types = [country.petroleum_Type for country in export_countries]
 export_costs = [country.Export_cost for country in export_countries]
