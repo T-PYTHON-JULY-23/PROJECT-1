@@ -1,0 +1,46 @@
+checkAvailability(posts,1)
+makeUnavailable(posts,1)
+card1 = CreditCard('khald khalf',6,'378282246310005','','244')
+card2 = CreditCard('sara ahmad',5000,'378734493671000','','878')
+print(card2.get_cardNumber())
+cards[card1.get_cardNumber()] = card1
+cards[card2.get_cardNumber()] = card2
+print(payment('khald khalf','378282246310005','','244',cards))  jjjj
+cards.update[card2.get_cardNumber()] = card2
+cards.update(card1.get_cardNumber()) = card1
+print(cards)
+
+petPost:PetPost = posts.get(1)
+if petPost and petPost.getavailable() == True:
+    print('n')
+else:
+    print('mo')
+makeUnavailable(posts,1)
+addPost(posts,post2)
+deletePost(posts,1)
+displayPosts(posts)
+displayPosts(posts)
+post2 = PetPost('ssss','sssss',5,'ss','sss')
+# print(post.getOwner())
+addPost(posts,post)
+addPost(posts,post2)
+while user !='e':
+    user1=input('here')
+    user1 = user
+    user=input('here')
+    user2 = user
+    user=input('here')
+    user3 = user
+    user=input('here')
+    user4 = user
+    user=input('here')
+    user5 =user
+    post3 = PetPost(user1,user2,int(user3),user4,user5)
+    addPost(posts,post3)
+print(posts)
+print('-'*20)
+displayPosts(posts)
+request(posts,2)
+displayPosts(posts
+deletePost(posts,2)
+displayPosts(posts)
