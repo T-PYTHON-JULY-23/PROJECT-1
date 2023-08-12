@@ -24,22 +24,21 @@ class WhoWinFirst:
             if not self.is_valid_number(num1, num2):
                 continue
 
-            if num1 in self.playerTurns + self.computerTurns:
+            if (num1 ,num2) in self.playerTurns + self.computerTurns:
                 print("You already entered that number, please choose a different one.")
                 continue
-
-            # Update currentPlayer before making a move
-            if self.currentPlayer == "player":
-                self.currentPlayer = "computer"
-            else:
-                self.currentPlayer = "player"
 
             self.playerTurns.append(num1)
             if num2 is not None:
                 self.playerTurns.append(num2)
 
+            if self.currentPlayer == "player":
+                self.currentPlayer = "computer"
+            else:
+                self.currentPlayer = "player"
+
             print("Player turns:", self.playerTurns)
-            print("Computer turns:", self.computerTurns)
+            
 
             if self.check_win():
                 print(self.currentPlayer.capitalize(), "wins!")
@@ -47,7 +46,7 @@ class WhoWinFirst:
 
             if self.currentPlayer == "computer":
                 self.computerPlaying()  # Call computerPlaying() after player's turn
-                print("Computer turns:", self.computerTurns)
+            print("Computer turns:", self.computerTurns)
 
             if self.check_win():
                 print(self.currentPlayer.capitalize(), "wins!")
@@ -79,12 +78,14 @@ class WhoWinFirst:
         else:
             return False
 
-    def switch_player(self):
+    """def switch_player(self):
         if self.currentPlayer == "player":
             self.currentPlayer = "computer"
         else:
-            self.currentPlayer = "player"
+            self.currentPlayer = "player"""
 
 
 game = WhoWinFirst()
-game.play()
+
+if __name__ == "__main__":
+    game.play()

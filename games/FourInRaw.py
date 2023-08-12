@@ -83,4 +83,6 @@ class FourInARow:
 
 
 fourInARow = FourInARow()
-"""fourInARow.play()""" 
+
+if __name__ == "__main__":
+    fourInARow.play()

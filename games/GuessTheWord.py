@@ -50,5 +50,8 @@ class GuessWord:
 
 wordbank = ["python", "java", "ruby", "php", "javascript" , "html"]
 GuessTHEWord= GuessWord(wordbank)
-"""GuessTHEWord.play()"""
+
+
+if __name__ == "__main__":
+    GuessTHEWord.play()
 
