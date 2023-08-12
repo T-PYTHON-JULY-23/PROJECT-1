@@ -9,6 +9,10 @@ def ClientInfo():
     inflation  = 0.005
 
     print('_'*30)
+    print("\nWelcome to Finesse Program")
+    print('_'*30)
+          
+    print('_'*30)
     print("\nPlease enter the following information:")
     print('_'*30)
 
