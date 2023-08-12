@@ -1,4 +1,4 @@
-# Ghaida Project :  Airline System :
+# Ghaida Project :  Airline System
 
 #### Overview: An airline system designed to serve both employees and travelers. The system includes various functionalities to ensure smooth operations. The system aims to manage flights, seat reservations, ticket generation. The two main user roles are employees and travelers, and each has specific tasks they can perform within the system. 
 
