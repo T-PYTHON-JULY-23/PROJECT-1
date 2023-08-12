@@ -4,7 +4,7 @@ from colorama import Fore, Back, Style
 
 class ExpensesTracker :
     def __init__(self) -> None:
-        self.load_expense_data()
+        self.load_expense_data() 
 
         
     #1 This function will add and save catagory and amount to json file

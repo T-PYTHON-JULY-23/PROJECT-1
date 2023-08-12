@@ -53,3 +53,4 @@ while True :
 
     else :
         print(Fore.LIGHTCYAN_EX+"❌ Invalid choice. Try again. ❌") # This message will appear if the user entered the wrong number(not between 1-5)
+ 
