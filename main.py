@@ -4,7 +4,7 @@ from colorama import*
 from flight import *
 from airlineSystem import *
 from users.usersClasses import *
-import json
+
 print(Fore.LIGHTBLACK_EX +(text2art("     WELCOME",font='varsity')))
 print(Fore.CYAN+(text2art("Tuwaiq Airlines",font='slant')))
 print(Style.RESET_ALL)
