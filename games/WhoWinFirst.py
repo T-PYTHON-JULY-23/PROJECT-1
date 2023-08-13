@@ -41,7 +41,7 @@ class WhoWinFirst:
                 
 
                 if self.check_win():
-                    print(self.currentPlayer.capitalize(), "wins!")
+                    print("player wins!")
                     break
 
                 if self.currentPlayer == "computer":
@@ -49,7 +49,7 @@ class WhoWinFirst:
                     print("Computer turns:", self.computerTurns)
 
                 if self.check_win():
-                    print(self.currentPlayer.capitalize(), "wins!")
+                    print("computer wins!")
                     break
                     
 
