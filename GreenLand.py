@@ -1,4 +1,4 @@
-
+from farmer import request_farmer
 indoor_plant= {
     "Rubber trees":{ 
     "price": 55,
@@ -38,7 +38,6 @@ outdoor_plant= {
     "quntity":10}}
 
 
-
 def display_plants():
     
         git_outdoor_plant= lambda x: print(f"Outdoor plant in our Green Land: {outdoor_plant.keys()}")
@@ -51,9 +50,11 @@ def display_plants():
 
 display_plants()
 
+# بما انك بتستخدمين basket من برا ، لازم تطلعينه من الفنكشن
+basket = []
 def git_plant():
     print("Welcome to Green Land")
-    basket = []
+    # basket = []
 
     while True:
         
@@ -72,7 +73,7 @@ def git_plant():
 
             else:
                 print("Invalid plant name. Please try again.")
-        elif user_choice.lower == "outdoor":
+        elif user_choice.lower() == "outdoor":  # هنا ماكان فيه قوسين بعد lower
             for key, value in outdoor_plant.items():
                 print(f"{key}. {value}")
 
@@ -80,17 +81,22 @@ def git_plant():
             if plant_name in outdoor_plant:
                 basket.append(outdoor_plant[plant_name]['price'])
                 basket.append(plant_name)
-                indoor_plant[plant_name]['quntity']-=1
+                outdoor_plant[plant_name]['quntity'] -= 1  # هنا كنتي كاتبة اندور والمفروض اوتدور
             else:
                 print("Invalid plant number. Please try again.")
         else:
             print("Invalid choice. Please select 'indoor', 'outdoor', or 'exit'.")
+    if user_choice=="exit" and len(basket)!=0:
+                user_choice=input("Do you want farmer? y or n ")
+                if user_choice=="y":
+                    request_farmer()
+                else:
+                    print("Thank you for visiting Green Land. Have a great day!")
 
-
+        
     print("Thank you for visiting Green Land. Have a great day!")
 
     return basket
 
+
 print(git_plant())
-
-
