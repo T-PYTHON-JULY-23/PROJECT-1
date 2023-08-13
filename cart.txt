@@ -1,0 +1,1 @@
+[{'Id': 101, 'Ganre': 'Fantasy', 'Title': 'A Hero Born by Jin Yong', 'Price SR': 15}, {'Id': 102, 'Ganre': 'Fantasy', 'Title': 'What Should Be Wild by Julia Fine', 'Price SR': 18}, {'Id': 103, 'Ganre': 'Fantasy', 'Title': 'Game of Thrones', 'Price SR': 20}]

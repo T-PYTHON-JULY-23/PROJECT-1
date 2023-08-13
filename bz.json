@@ -1,0 +1,116 @@
+[
+    {
+        "Id": 101,
+        "Ganre": "Fantasy",
+        "Title": "A Hero Born by Jin Yong",
+        "Price SR": 15
+    },
+    {
+        "Id": 102,
+        "Ganre": "Fantasy",
+        "Title": "What Should Be Wild by Julia Fine",
+        "Price SR": 18
+    },
+    {
+        "Id": 103,
+        "Ganre": "Fantasy",
+        "Title": "Game of Thrones",
+        "Price SR": 20
+    },
+    {
+        "Id": 201,
+        "Ganre": "Programming",
+        "Title": "Clean Code by Robert C. Martin",
+        "Price SR": 89.0
+    },
+    {
+        "Id": 202,
+        "Ganre": "Programming",
+        "Title": "Design Patterns by Erich Gamma",
+        "Price SR": 12.0
+    },
+    {
+        "Id": 203,
+        "Ganre": "Programming",
+        "Title": "The Pragmatic Programmer by Andrew Hunt",
+        "Price SR": 14.0
+    },
+    {
+        "Id": 301,
+        "Ganre": "Crime",
+        "Title": "Crime and Punishment by Fyodor Dostoevsky",
+        "Price SR": 14.0
+    },
+    {
+        "Id": 302,
+        "Ganre": "Crime",
+        "Title": "And Then There Were none by Agatha Christie",
+        "Price SR": 14.0
+    },
+    {
+        "Id": 303,
+        "Ganre": "Crime",
+        "Title": "The Thursday Murder Club by Richard Osman",
+        "Price SR": 14.0
+    },
+    {
+        "Id": 401,
+        "Ganre": "Thriller",
+        "Title": "The Shining",
+        "Price SR": 14.0
+    },
+    {
+        "Id": 402,
+        "Ganre": "Thriller",
+        "Title": "If We Were Villains",
+        "Price SR": 14.0
+    },
+    {
+        "Id": 403,
+        "Ganre": "Thriller",
+        "Title": "No Longer Human by Andrew Hunt",
+        "Price SR": 14.0
+    },
+    {
+        "Id": 501,
+        "Ganre": "Mystery",
+        "Title": "The Big Sleep by Andrew Hunt",
+        "Price SR": 14.0
+    },
+    {
+        "Id": 502,
+        "Ganre": "Mystery",
+        "Title": "Anatomy of a Murder",
+        "Price SR": 14.0
+    },
+    {
+        "Id": 503,
+        "Ganre": "Mystery",
+        "Title": "In Cold Blood",
+        "Price SR": 14.0
+    },
+    {
+        "Id": 601,
+        "Ganre": "Humour",
+        "Title": "A Man Called Ove",
+        "Price SR": 14.0
+    },
+    {
+        "Id": 602,
+        "Ganre": "Humour",
+        "Title": "Lucky Jim",
+        "Price SR": 14.0
+    },
+    {
+        "Id": 603,
+        "Ganre": "Humour",
+        "Title": "Cat's Cradle",
+        "Price SR": 14.0
+    },
+    {
+        "Id": 121,
+        "Ganre": "qq",
+        "Title": "qq",
+        "Price SR": 1
+    }
+]
