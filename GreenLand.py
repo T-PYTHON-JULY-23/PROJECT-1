@@ -58,7 +58,10 @@ def git_plant():
 
     while True:
         
-        user_choice = input("Which plant do you want? Indoor, outdoor, or exit: ")      
+        user_choice = input("Which plant do you want? Indoor, outdoor, or exit: ") 
+        if user_choice.isdigit():
+             raise Exception("No numbers only string")
+                  
         if user_choice == "exit":
             break
         elif user_choice.lower() == "indoor":
