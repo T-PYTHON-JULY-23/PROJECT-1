@@ -1,43 +1,47 @@
-# PROJECT-1
+# BookCaze
 
 ## Based on what you’ve learned until now , create a project of your choosing (impress us with your imagination) . This project must at least satisfy the following minimum requirements :
 
-- Must be interactive on CLI.
-- Use lists or dictionaries or tuples. 
-- Use loops.
-- Use functions that return an output . 
-- Use a Lambda function.
-- Use at least 1 Class.
-- Use some form of Error Handling .
-- Organize Your Code into modules & (or packages)
+- Must be interactive on CLI.[dONE]
+- Use lists or dictionaries or tuples.[dONE]
+- Use loops.[dONE]
+- Use functions that return an output .[dONE]
+- Use a Lambda function.[dONE]
+- Use at least 1 Class.[dONE]
+- Use some form of Error Handling .[dONE]
+- Organize Your Code into modules & (or packages)[dONE]
 
-## Example Project :  An online Grocery Store :
+## Project idea :  An online Ebooks Website 📖:
 
-#### Overview : An online store that sells fruits to customers. This online store has 2 main users. The customer and the manager of the store . Each one of them should be able to do the following tasks for the store to function properly . 
+#### Overview : An online platform that sells ebooks to customers and provide subscription on-demand access to library of Ebooks 
 
-#### As a customer I should be able to do the following :
-- Browse  Products . 
-- View the product info (summary, specs, price, quantity , etc.)
-- Search for Products.
-- Get recommendations for my next purchase based on my purchase history.
-- Add Products to the shopping cart .
-- Remove a product from the shopping cart.
-- List the products in my shopping cart. 
-- Continue to checkout . 
-- Fill in my address for delivery.
-- Get receipt of my purchases.
-- Check delivery status . 
+#### Our Customer should do this actions:
+- Sign in and Sign up 👤.
+- search in the library 🔎.
+- easy access to the books 👨‍💻.
+- request new books 🙋‍♂️📥.
+- Read books online 📚.
+- Buy single book and read it anytime without subscription 🛒✔️.
+- Choose a plan and the customer will access to all books in certain period 🤝🏻.
+- browse to all library 👀.
+
 
 
 
 #### Usage :
- Explain to the user how to use your project . 
- for example:
- - type in search product_name to search for a product.
- - type in list_products to show all the products in the grocery.
- - type in show product_name to get information about this product.
- - type in buy product_name to buy the product . 
- - and so on...
+- Type L for Login, R to Register
+- Enter your username:(...)
+- Enter your password:(...)
+- You want to subscribe or buy a book ? to Subscribe press '1' & Buy a book press '2'
+- Choose your plan 😄 ! (month '1' - 3 months '3' - 6 months '6' 12 months '12'
+- Type 1 for display books
+- Type 2 for buy a book
+- Type 3 search for a book
+- Type 4 request a book
+- Enter Search Term:(...)
+- Add to cart
+- Remove from cart
+- Display cart
+- 
 
 
-### For your project. Edit this README.md file to include your own project name,  overview, user stories, and usage. 
