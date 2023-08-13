@@ -19,14 +19,17 @@
  3-Who win first
 
  
-- 
 
 
 
 #### Usage :
 
 1. Four in a raw 
-
+Game Rules:
+    1. The game is played on a vertical grid with six rows and seven columns.
+    2. Two players take turns, one using red discs and the other using yellow discs.
+    3. The goal is to be the first to connect four of one's own discs in a row (horizontally, vertically, or diagonally) on the game board.
+    4. tha game stops when eaither player one or two wins or when it's a tie
 
 2. Guess the word
 

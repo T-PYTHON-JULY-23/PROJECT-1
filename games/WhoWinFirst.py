@@ -10,48 +10,51 @@ class WhoWinFirst:
         while True:
             number = input("Enter a number or two between 1 to 20 in order separated by space: ")
             numbersList = number.split(" ")
+            try:
+                # Check if the user entered one or two numbers
+                if len(numbersList) == 1:
+                    num1 = int(numbersList[0])
+                    num2 = None
+                elif len(numbersList) == 2:
+                    num1, num2 = int(numbersList[0]), int(numbersList[1])
+                else:
+                    print("You must enter one or two numbers only.")
+                    continue
 
-            # Check if the user entered one or two numbers
-            if len(numbersList) == 1:
-                num1 = int(numbersList[0])
-                num2 = None
-            elif len(numbersList) == 2:
-                num1, num2 = int(numbersList[0]), int(numbersList[1])
-            else:
-                print("You must enter one or two numbers only.")
-                continue
+                if not self.is_valid_number(num1, num2):
+                    continue
 
-            if not self.is_valid_number(num1, num2):
-                continue
+                if (num1 ,num2) in self.playerTurns + self.computerTurns:
+                    print("You already entered that number, please choose a different one.")
+                    continue
 
-            if (num1 ,num2) in self.playerTurns + self.computerTurns:
-                print("You already entered that number, please choose a different one.")
-                continue
+                self.playerTurns.append(num1)
+                if num2 is not None:
+                    self.playerTurns.append(num2)
 
-            self.playerTurns.append(num1)
-            if num2 is not None:
-                self.playerTurns.append(num2)
+                if self.currentPlayer == "player":
+                    self.currentPlayer = "computer"
+                else:
+                    self.currentPlayer = "player"
 
-            if self.currentPlayer == "player":
-                self.currentPlayer = "computer"
-            else:
-                self.currentPlayer = "player"
+                print("Player turns:", self.playerTurns)
+                
 
-            print("Player turns:", self.playerTurns)
-            
+                if self.check_win():
+                    print(self.currentPlayer.capitalize(), "wins!")
+                    break
 
-            if self.check_win():
-                print(self.currentPlayer.capitalize(), "wins!")
-                break
+                if self.currentPlayer == "computer":
+                    self.computerPlaying()  # Call computerPlaying() after player's turn
+                    print("Computer turns:", self.computerTurns)
 
-            if self.currentPlayer == "computer":
-                self.computerPlaying()  # Call computerPlaying() after player's turn
-            print("Computer turns:", self.computerTurns)
+                if self.check_win():
+                    print(self.currentPlayer.capitalize(), "wins!")
+                    break
+                    
 
-            if self.check_win():
-                print(self.currentPlayer.capitalize(), "wins!")
-                break
-
+            except ValueError:
+                print("Invalid input. Please enter valid numeric values.")
 
 
     def is_valid_number(self, num1, num2):
@@ -69,6 +72,10 @@ class WhoWinFirst:
                 self.computerTurns.append(next_computer_num)
             else:
                 self.computerTurns.extend([next_computer_num, next_computer_num + 1])
+            self.currentPlayer = "player"
+            
+            
+            
 
     def check_win(self):
         if 20 in self.playerTurns:
@@ -77,12 +84,6 @@ class WhoWinFirst:
             return True
         else:
             return False
-
-    """def switch_player(self):
-        if self.currentPlayer == "player":
-            self.currentPlayer = "computer"
-        else:
-            self.currentPlayer = "player"""
 
 
 game = WhoWinFirst()

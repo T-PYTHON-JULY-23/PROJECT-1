@@ -2,13 +2,13 @@ from games.GuessTheWord import GuessWord
 from games.FourInRaw import FourInARow
 from games.WhoWinFirst import WhoWinFirst
 
-wordbank = ["python", "java", "ruby", "php", "javascript", "html", "C"]
+wordbank = ["python", "java", "php", "javascript", "html", "C", "C++"]
 
 def main():
     games = [GuessWord(wordbank), FourInARow(), WhoWinFirst()]
     
     while True:
-        print("Welcome to the Games World!!!\n")
+        print("\nWelcome to the Games World!!!\n")
         print("Select a game to play:\n")
         print("1- GuessTheWord")
         print("2- FourInRaw")

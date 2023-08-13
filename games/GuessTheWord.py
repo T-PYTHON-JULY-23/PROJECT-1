@@ -10,7 +10,7 @@ class GuessWord:
     def select_word(self):
         self.word = random.choice(self.wordbank)
         
-    def get_masked_word(self):
+    def get_word(self):
         return "".join([letter if letter in self.guesses else "_" for letter in self.word])
         
     def get_remaining_turns(self):
@@ -25,7 +25,7 @@ class GuessWord:
     def play(self):
         self.select_word()
         while self.get_remaining_turns() > 0:
-            print("Word: ", self.get_masked_word())
+            print("Word: ", self.get_word())
             print("Guesses: ", ", ".join(self.guesses))
             print("Remaining turns: ", self.get_remaining_turns())
             try:
@@ -48,7 +48,7 @@ class GuessWord:
         print("Game over. You failed to guess the word.")
         print("The word was: ", self.word)
 
-wordbank = ["python", "java", "ruby", "php", "javascript" , "html"]
+wordbank = ["python", "java", "php", "javascript" , "html", "C", "c++"]
 GuessTHEWord= GuessWord(wordbank)
 
 
