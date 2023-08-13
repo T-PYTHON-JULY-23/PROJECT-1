@@ -146,7 +146,7 @@ def services():
             gender = input("Gender:")
             bread = input("Bread:")
             contact_info = input("Contact info:")
-            place_found = input("Place found")
+            place_found = input("Place found:")
 
             foundpet = FoundPet(color, bread, type, gender,
                                 contact_info, place_found)

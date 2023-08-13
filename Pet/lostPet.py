@@ -14,7 +14,7 @@ class LostPet(Pet):
        
        lost_dict={"name":self.name,"color": self.color,"bread":self.bread,"type":self.type,"gender":self.gender,"contact_info":self.contact_info,"place_lost":self.place_lost}
        lost.append(lost_dict)
-       return (Fore.GREEN,"Lost pet report added! we hope you find your pet soon. ")
+       return ("Lost pet report added! we hope you find your pet soon.")
 
      def view(self):
       lost_dict={"name":self.name,"color": self.color,"bread":self.bread,"type":self.type,"gender":self.gender,"contact_info":self.contact_info,"place_lost":self.place_lost}
