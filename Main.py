@@ -28,6 +28,7 @@ while True:
 
     if user_choice == 1:
         name_pet=input('Enter name of the pet : ')
+        category_pet = input("Enter category of pet: ")
         phone_number_owner =input('Enter the phone number of the owner : ')
         while  len(phone_number_owner)< 10 or len(phone_number_owner)>10 or not phone_number_owner.isdigit():
             print("the phone number must be 10 intigirs or valid number")
@@ -56,7 +57,7 @@ while True:
 
 
         try:
-            pet1= PH.Pet(name_pet,int(phone_number_owner),city__owner,gender_pet, age_pet) #create object from class Pet
+            pet1= PH.Pet(name_pet,gender_pet, int(phone_number_owner),city__owner,gender_pet, age_pet) #create object from class Pet
             PH.add_pet(pet1)
         except Exception as e:
             print("Some thing is wrong try agin", e)
@@ -110,6 +111,7 @@ while True:
                 elif user_choice2.lower() == "no":
                     try:
                         PH.disply_pets(None)
+                        print("\n")
                     except:
                         print("There are no pets to adopt.")
                         print("\n")

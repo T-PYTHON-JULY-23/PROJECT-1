@@ -3,11 +3,12 @@
 
 #list to save pets information
 pets = []
-#calss pet that has pet_name,phone_number,city,gender,age as atributes
+#calss pet that has pet_name,gender_pet, phone_number,city,gender,age as atributes
 class Pet:
-    def __init__(self,pet_name:str,phone_number:int,city:str,gender:str,age:int) -> None:
+    def __init__(self,pet_name:str,phone_number_owner:int,city:str,gender:str,age:int,pet_category:str) -> None:
         self.pet_name = pet_name
-        self.phone_number = phone_number
+        self.pet_category = pet_category
+        self.phone_number_owner = phone_number_owner
         self.city = city
         self.gender = gender
         self.age = age
@@ -27,7 +28,7 @@ def add_pet(pet:Pet):
 #function that display pet for the user 
 def disply_pets(pet:Pet):
     for index, p in enumerate(pets): #'p' short cut from 'pet' word
-        print(f"{index} - [the name of pet is:{p.pet_name} -the phon number of owner is: {p.phone_number} -city: {p.city} -gender of pet: {p.gender} -age of pet: {p.age}]-{'Not available to choose' if p.is_adopted else 'Available to choose'}]")
+        print(f"{index} - [the name of pet is:{p.pet_name} -category is:{p.pet_category} -the phon number of owner is: {p.phone_number_owner} -city: {p.city} -gender of pet: {p.gender} -age of pet: {p.age}]-{'Not available to choose' if p.is_adopted else 'Available to choose'}]")
 
 
 
@@ -73,7 +74,7 @@ def add_adoptioner(ado:Adoptioner): #'ado' short cut from 'adoptioner' word
 #function to display adoptioner informatiom to the user
 def display_adoptioner_information(ado):
     for index , adop in enumerate(adoptioner_inf):
-        print(f"{index} - [the name is: {adop.name_adoptioners}-the phone number is: {adop.phone_number_adoptioner} the choisen pet is: {adoptioner_inf[index].user_adopt}]")
+        print(f"{index} - [the name is: {adop.name_adoptioners} -the phone number is: {adop.phone_number_adoptioner} -the choisen pet is: {adoptioner_inf[index].user_adopt}]")
 
 
 
