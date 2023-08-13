@@ -1,0 +1,65 @@
+{
+    "questions": [
+        {
+            "question": "What is the main goal of the 2030 Saudi Vision?",
+            "correct_answer": "To transform Saudi Arabia into a thriving and sustainable economy by 2030.",
+            "answer_duration_min": 1,
+            "choices": [
+                "To increase oil production",
+                "To diversify the economy",
+                "To improve quality of life for citizens",
+                "To transform Saudi Arabia into a thriving and sustainable economy by 2030."
+            ]
+        },
+        {
+            "question": "Which sector does the 2030 Saudi Vision prioritize for growth?",
+            "correct_answer": "The private sector.",
+            "answer_duration_min": 1,
+            "choices": [
+                "The public sector",
+                "The energy sector",
+                "The private sector",
+                "The private sector."
+            ]
+        },
+        {
+            "question": "What is the target set by the 2030 Saudi Vision for female participation in the workforce?",
+            "correct_answer": "30%",
+            "answer_duration_min": 1,
+            "choices": [
+                "20%",
+                "40%",
+                "50%",
+                "30%"
+            ]
+        },
+        {
+            "question": "The private sector will play no role in achieving the goals of the 2030 Saudi Vision",
+            "correct_answer": "False",
+            "answer_duration_min": 1,
+            "choices": [
+                "True",
+                "False"
+            ]
+        },
+        {
+            "question": "The 2030 Saudi Vision aims to reduce the kingdom's dependence on oil exports.",
+            "correct_answer": "True",
+            "answer_duration_min": 1,
+            "choices": [
+                "True",
+                "False"
+            ]
+        },
+        {
+            "question": "How much of Saudi Arabia's electricity is expected to come from renewable sources by 2030 according to the vision?",
+            "correct_answer": "95%",
+            "answer_duration_min": 1,
+            "choices": [
+                "75%",
+                "85%",
+                "95%"
+            ]
+        }
+    ]
+}

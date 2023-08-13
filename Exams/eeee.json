@@ -1,0 +1,48 @@
+{
+    "questions": [
+        {
+            "question": "What is the main goal of the 2030 Saudi Vision?",
+            "correct_answer": "To transform Saudi Arabia into a thriving and sustainable economy by 2030.",
+            "answer_duration_min": 1,
+            "choices": [
+                "To increase oil production",
+                "To diversify the economy",
+                "To improve quality of life for citizens",
+                "To transform Saudi Arabia into a thriving and sustainable economy by 2030."
+            ]
+        },
+        {
+            "question": "Which sector does the 2030 Saudi Vision prioritize for growth?",
+            "correct_answer": "The private sector.",
+            "answer_duration_min": 1,
+            "choices": [
+                "The public sector",
+                "The energy sector",
+                "The private sector",
+                "The private sector."
+            ]
+        },
+        {
+            "question": "who are you ?",
+            "correct_answer": "ali",
+            "answer_duration_min": "1",
+            "choices": [
+                "me?",
+                "iam me",
+                " aziz",
+                "ali"
+            ]
+        },
+        {
+            "question": "are fine ?",
+            "correct_answer": "no",
+            "answer_duration_min": "1",
+            "choices": [
+                "yes",
+                "no",
+                "very well",
+                "some time"
+            ]
+        }
+    ]
+}

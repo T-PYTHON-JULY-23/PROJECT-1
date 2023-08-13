@@ -1,0 +1,42 @@
+{
+    "students": [
+        {
+            "student_name": "aziz",
+            "student_password": "1234",
+            "student_id": 1,
+            "student_exams": [
+                {
+                    "exam_name": "it-exam",
+                    "exam_grade": 33
+                },
+                {
+                    "exam_name": "math-exam",
+                    "exam_grade": 41
+                }
+            ]
+        },
+        {
+            "student_name": "majed",
+            "student_password": "111",
+            "student_id": 2,
+            "student_exams": []
+        },
+        {
+            "student_name": "khalid",
+            "student_password": "111",
+            "student_id": 3,
+            "student_exams": [
+                {
+                    "exam_name": "it-exam",
+                    "exam_grade": null
+                }
+            ]
+        },
+        {
+            "student_name": "malik",
+            "student_password": "111",
+            "student_id": 4,
+            "student_exams": []
+        }
+    ]
+}

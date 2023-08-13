@@ -1,0 +1,37 @@
+{
+    "questions": [
+        {
+            "question": "What is the value of 2 + 2?",
+            "correct_answer": "4",
+            "answer_duration_min": 1,
+            "choices": [
+                "2",
+                "4",
+                "6",
+                "8"
+            ]
+        },
+        {
+            "question": "What is the result of 5 * 3?",
+            "correct_answer": "15",
+            "answer_duration_min": 1,
+            "choices": [
+                "8",
+                "12",
+                "15",
+                "20"
+            ]
+        },
+        {
+            "question": "What is the value of 10 - 7?",
+            "correct_answer": "3",
+            "answer_duration_min": 1,
+            "choices": [
+                "1",
+                "2",
+                "3",
+                "4"
+            ]
+        }
+    ]
+}

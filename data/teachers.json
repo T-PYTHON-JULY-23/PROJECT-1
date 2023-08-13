@@ -1,0 +1,17 @@
+{
+    "teachers": [
+        {
+            "teacher_name": "ali",
+            "teacher_code": "1121",
+            "teacher_students": [
+                "aziz",
+                "khalid",
+                "malik"
+            ],
+            "teacher_exams": [
+                "it-exam",
+                "eeee"
+            ]
+        }
+    ]
+}
