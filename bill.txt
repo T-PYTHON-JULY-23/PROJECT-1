@@ -1,0 +1,19 @@
+Date : 2023-08-13 06:21:24
+
+Customer Name:naif lli
+Customer Number:533835115
+Delivery to: abha-hhsxh
+
+-PRODUCT-   -PRICE-     -QUANTITY-
+pepsi          2            4
+rice          20            1
+chips          2            2
+
+
+
+The Total of product: 32
+Delivery price: 25
+The total: 67
+The total with tax : 71.8 
+
+ State : complete

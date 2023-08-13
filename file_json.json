@@ -1,0 +1,25 @@
+{
+    "products": [
+        {
+            "product_name": "pepsi",
+            "price": 2,
+            "quantity": 4,
+            "description": "-Brand: MenaBev ",
+            "total": 8
+        },
+        {
+            "product_name": "rice",
+            "price": 20,
+            "quantity": 1,
+            "description": "-Brand: AlWalimah  ",
+            "total": 20
+        },
+        {
+            "product_name": "chips",
+            "price": 2,
+            "quantity": 2,
+            "description": "-Brand: Raja      ",
+            "total": 4
+        }
+    ]
+}
