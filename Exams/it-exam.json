@@ -32,6 +32,17 @@
                 "3",
                 "4"
             ]
+        },
+        {
+            "question": "2**2 ?",
+            "correct_answer": "4",
+            "answer_duration_min": "1",
+            "choices": [
+                "2",
+                "3",
+                "4",
+                "8"
+            ]
         }
     ]
 }

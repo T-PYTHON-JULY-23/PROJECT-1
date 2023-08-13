@@ -57,7 +57,7 @@ def view_student_exams(student_name: str):
 
     for exam in student['student_exams']:
         exam_name = exam['exam_name']
-        exam_grade = exam['exam_grade'] if exam['exam_grade'] is not None else 'not-taken'
+        exam_grade = exam['exam_grade'] if exam['exam_grade'] is not None else 'not done yet'
         exam_list.append([exam_name, exam_grade])
 
     print(f"{student['student_name']} Grades Information:")

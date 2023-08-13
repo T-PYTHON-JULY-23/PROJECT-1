@@ -54,12 +54,12 @@ def edit_grade(teacher_code: str):
         student_name = input(
             "please enter the name of the student you want to edit the grade for 'in text' or enter '0' exit : ".capitalize())
 
+        if student_name == '0':
+            return
         student = search_student(student_name)
 
         if student is not None:
             break
-        elif student_name == '0':
-            return
 
     print(f"this are the exams for {student_name}".capitalize())
 
@@ -70,7 +70,7 @@ def edit_grade(teacher_code: str):
 
     while True:
         exam_index = input(
-            f"please chose from the exams, what exam you want to edit the grade for {student_name} or enter 'None' to give the student another try to take the exam or '0' to exit  : ".capitalize())
+            f"please chose from the exams, what exam you want to edit the grade for {student_name} or '0' to exit  : ".capitalize())
 
         if exam_index == '0':
             return
@@ -88,7 +88,7 @@ def edit_grade(teacher_code: str):
 
     while True:
         new_exam_grade = input(
-            f"please enter the new grade for {student_name} out of 100 'in int'or enter 'Q/q' to exit : ".capitalize())
+            f"please enter the new grade for {student_name} out of 100 'in int'or enter 'Q/q' to exit or enter 'None' to give the student another try to take the exam : ".capitalize())
         
         if new_exam_grade == 'None':
             break

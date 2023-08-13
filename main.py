@@ -3,7 +3,7 @@ from teacher import *
 def main():
 
     while True:
-        choice1 = int(input("hi, are you \n[1] - student \n[2] - teacher \n[0] - to exit the program \nPlease enter your choice : "))
+        choice1 = input("hi, are you \n[1] - student \n[2] - teacher \n[0] - to exit the program \nPlease enter your choice : ")
         if choice1.isdigit():
             choice1 = int(choice1)
             
