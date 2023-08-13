@@ -1,8 +1,18 @@
 from Room import Room
 import colorama
 import names 
-
+import pickle
+    
 Roooom=[]        
+try:
+
+    with open('tess.pkl','rb')as f :
+        Roooom=pickle.load(f)
+except FileNotFoundError as a:
+        with open('tess.pkl','x')as f :
+            pass
+        
+    
 x=None
 
 
@@ -160,3 +170,6 @@ while x!='exit':
 
     except Exception as e :
         print(colorama.Fore.RED,e)
+
+with open('tess.pkl','wb') as f :
+    pickle.dump(Roooom,f,pickle.HIGHEST_PROTOCOL)
