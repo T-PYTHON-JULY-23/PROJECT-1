@@ -42,19 +42,15 @@ def display_plants():
     
         git_outdoor_plant= lambda x: print(f"Outdoor plant in our Green Land: {outdoor_plant.keys()}")
         git_outdoor_plant(outdoor_plant)
-        #print(f"Outdoor plant in our Green Land is:{git_outdoor_plant(outdoor_plant)}")
-
         git_indoor_plant= lambda x: print(f"Indoor plant in our Green Land is:{indoor_plant.keys()}")
         git_indoor_plant(indoor_plant)
    
 
 display_plants()
 
-# بما انك بتستخدمين basket من برا ، لازم تطلعينه من الفنكشن
 basket = []
 def git_plant():
     print("Welcome to Green Land")
-    # basket = []
 
     while True:
         
@@ -84,7 +80,7 @@ def git_plant():
             if plant_name in outdoor_plant:
                 basket.append(outdoor_plant[plant_name]['price'])
                 basket.append(plant_name)
-                outdoor_plant[plant_name]['quntity'] -= 1  # هنا كنتي كاتبة اندور والمفروض اوتدور
+                outdoor_plant[plant_name]['quntity'] -= 1 
             else:
                 print("Invalid plant number. Please try again.")
         else:
