@@ -2,13 +2,6 @@
     {
         "name": "Haifa",
         "age": "22",
-        "file_number": "/Users/nadam/Documents/My-REPO/PROJECT-1/venv/bin/python /Users/nadam/Documents/My-REPO/PROJECT-1/main.py",
-        "medical_history": "",
-        "chief_complient": ""
-    },
-    {
-        "name": "Haifa",
-        "age": "22",
         "file_number": "1084567",
         "medical_history": "asthmatic",
         "chief_complient": "broken teath"
@@ -30,7 +23,7 @@
     {
         "name": "Fahad",
         "age": "44",
-        "file_number": "1037652",
+        "file_number": "1038652",
         "medical_history": "diapetic patient",
         "chief_complient": "lose of teath"
     },
