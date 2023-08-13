@@ -1,42 +1,31 @@
 # PROJECT-1
 
-## This project must at least satisfy the following minimum requirements :
+## Project : Dental clinic program :
 
-- Must be interactive on CLI.
-- Use lists or dictionaries or tuples. 
-- Use loops.
-- Use functions that return an output . 
-- Use a Lambda function.
-- Use at least 1 Class.
-- Use some form of Error Handling .
-- Organize Your Code into modules & (or packages)
-
-## Project : Dental public health :
-
-
-#### As a Dental Doctor I should be able to do the following :
-- Browse choices . . 
-- chose 1 to Collect Patient Information (name , age , file number , medical_history , etc.)
-- Search for Products.
-- Get recommendations for my next purchase based on my purchase history.
-- Add Products to the shopping cart .
-- Remove a product from the shopping cart.
-- List the products in my shopping cart. 
-- Continue to checkout . 
-- Fill in my address for delivery.
-- Get receipt of my purchases.
-- Check delivery status . 
-
-
+#### As a Dentist I should be able to do the following :
+- View the choices from 1 to 5 :
+- 1\ to Collect Patient Information (name , age , file number , medical_history ,chief complient)
+- 2\ to Display All Patients you saved
+- 3\ to Find Patient by File Number
+- 4\ to remove Patient by File Number 
+- 5\ to Exit The Programme.
 
 #### Usage :
- Explain to the user how to use your project . 
- for example:
- - type in search product_name to search for a product.
- - type in list_products to show all the products in the grocery.
- - type in show product_name to get information about this product.
- - type in buy product_name to buy the product . 
- - and so on...
+- if you choose number 1 you must Fill Patient information: 
+* patient name 
+* patient age 
+* patient file number
+* medical history ( if he has medical history or Write "within normal limits" )
+* chief complient ( from patient words or his parents )
+ one by one until a message appears("Patient information collected successfully!")
 
+- if you choose number 2 the program will Display All Patients you added
 
-### For your project. Edit this README.md file to include your own project name,  overview, user stories, and usage. 
+- if you choose number 3 You will use patient's file number to find this Patient
+("File number must be a 7-digit number.") 
+
+-  if you choose number 4 You will use patient's file number to remove this Patient
+("File number must be a 7-digit number.") 
+
+- if you choose number 5 you will Exit from the program.
+
