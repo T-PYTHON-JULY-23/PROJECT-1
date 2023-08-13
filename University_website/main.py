@@ -59,7 +59,7 @@ while True:
                                 
 
                 elif(choose == 4):
-                    id =int(input("inter student id to delete"))
+                    id =int(input("inter student id to delete : "))
                     data_student.delete(id)
                     
                     
@@ -69,27 +69,22 @@ while True:
                     id= int(input("enter student id you want to update : "))
                     f=data_student.search(id)
                     if f !=None:
-                     while True:
-                        try:
-                            subject_1 = int(input("enter student marks in Statistics :"))
-                            subject_2 = int(input(" enter student marks in Physics : "))
-                            subject_3 = int(input("enter student marks in Python :"))
-                            subject_4 = int(input(" enter student marks in artificial intelligence : "))
-                            subject_5 = int(input(" enter student marks in Web development  : "))
+                        subject_1 = input("enter marks for Statistics : ")
+                        subject_2 = input("enter marks for Physics : ")
+                        subject_3 = input("enter student Python :")
+                        subject_4 = input(" enter student artificial intelligence : ")
+                        subject_5 = input(" enter student Web development  : ")
+                        data_student.update(id, subject_1, subject_2, subject_3, subject_4, subject_5)
+                        print(len(list))
+                        print("List after updation")
+                        for i in range(len(list)):
+                             data_student.display(list[i])
+                            
+                    
+                    
+                    
+                    
                         
-                            assert 1 <= subject_1 <= 100
-                            assert 1 <= subject_2 <= 100
-                            assert 1 <= subject_3 <= 100
-                            assert 1 <= subject_4 <= 100
-                            assert 1 <= subject_5 <= 100
-                            break
-                        except Exception as e:
-                            print("Input must be an integer between 1 and 100.",e.__class__)
-                    data_student.update(name, id, subject_1, subject_2, subject_3,subject_4,subject_5)
-                    print(len(list))
-                    print("List after updation")
-                    for i in range(len(list)):
-                        data_student.display(list[i])
 
 
                 elif(choose==6):
@@ -121,7 +116,7 @@ while True:
                                 sub_5=list[hold_data].Web_development 
 
                                 # lambda function 
-                                GPA_calculater= lambda sub1,sub2,sub3,sub4,sub5 : (sub1+sub2+sub3+sub4+sub5)/100
+                                GPA_calculater= lambda sub_1,sub_2,sub_3,sub_4,sub_5 : (sub_1+sub_2+sub_3+sub_4+sub_5)/100
 
                                 print(f'your GPA is : {GPA_calculater(sub_1, sub_2,sub_3,sub_4,sub_5)}')
                                 
